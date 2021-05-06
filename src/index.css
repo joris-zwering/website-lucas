@@ -1,13 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #0A0A0A;
+  color: #fff;
+  padding: 0px;
+}
+
+h1,h2,h3,h4,h5 {
+  margin: 0px;
+}
+
+p {
+  margin: 0px;
+  font-weight: 500;
+}
+
+li {
+  font-weight: 500;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+.animated {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 0.5;
+  -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+  opacity: 0
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+}
+
+.portfolio-container h2:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1600px) {
+  .portfolio-container {
+    padding-left: 7% !important;
+    padding-right: 7% !important;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .portfolio-body-responsive {
+    margin-top: 70px !important;
+    margin-left: inherit !important;
+    width: inherit !important;
+  }
+}
+
+
+
+@media only screen and (max-width: 530px) {
+  .portfolio-item-list{
+    display: inherit !important;
+    margin-top: 40px !important;
+  }
+
+  .portfolio-item-list img {
+    height: 210px !important;
+  }
+
+  .portfolio-container h1 {
+    font-size: 25px;
+  }
+
+  .portfolio-filter div{
+    display: none;
+    margin-top: -10px !important;
+  }
+
+  .navigation {
+    display: none !important;
+  }
+
+  .navbar {
+    padding-top: 20px !important;
+  }
+
+  .portfolio-items-title {
+    padding-top: 160px !important;
+  }
+
+  .portfolio-body-responsive {
+    margin-top: 70px !important;
+    margin-left: inherit !important;
+    width: inherit !important;
+  }
 }
